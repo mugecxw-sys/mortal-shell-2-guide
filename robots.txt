@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mugecxw-sys.github.io/mortal-shell-2-guide/sitemap.xml
