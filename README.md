@@ -22,3 +22,7 @@ URL: /collectibles/[item-name]-location/
 ```
 
 Every item guide should state the region, story requirement, exact route, annotated map, your own screenshots, and any relevant achievement or trophy.
+
+## Templates
+
+Copy `templates/item-location.html` for one item page, or `templates/walkthrough-chapter.html` for a main-story chapter. Replace every bracketed placeholder and remove the `noindex, nofollow` meta tag before publishing the new page.
