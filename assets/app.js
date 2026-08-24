@@ -4,6 +4,10 @@ if (appScript?.src) {
   launchStyles.rel = 'stylesheet';
   launchStyles.href = appScript.src.replace('app.js', 'site-upgrade.css');
   document.head.append(launchStyles);
+  const gameTheme = document.createElement('link');
+  gameTheme.rel = 'stylesheet';
+  gameTheme.href = appScript.src.replace('app.js', 'mortal-shell-theme.css');
+  document.head.append(gameTheme);
 }
 
 const navButton = document.querySelector('.menu-toggle');
@@ -19,7 +23,7 @@ const screenshotSlot = document.querySelector('.screenshot-slot');
 if (screenshotSlot && appScript?.src) {
   const screenshot = new Image();
   screenshot.onload = () => { screenshotSlot.hidden = true; };
-  screenshot.src = appScript.src.replace('app.js', 'images/home-hero.jpg');
+  screenshot.src = appScript.src.replace('app.js', 'images/home-hero.webp');
 }
 
 document.querySelectorAll('.site-footer').forEach((footer) => {
