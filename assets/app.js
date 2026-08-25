@@ -8,6 +8,10 @@ if (appScript?.src) {
   gameTheme.rel = 'stylesheet';
   gameTheme.href = appScript.src.replace('app.js', 'mortal-shell-theme.css');
   document.head.append(gameTheme);
+  const siteStatusStyles = document.createElement('link');
+  siteStatusStyles.rel = 'stylesheet';
+  siteStatusStyles.href = appScript.src.replace('app.js', 'site-status.css');
+  document.head.append(siteStatusStyles);
 }
 
 const navButton = document.querySelector('.menu-toggle');
@@ -17,6 +21,15 @@ if (navButton && nav) {
     const open = nav.classList.toggle('open');
     navButton.setAttribute('aria-expanded', String(open));
   });
+}
+
+if (nav && !nav.querySelector('[data-beginner-guide]')) {
+  const beginnerGuide = document.createElement('a');
+  beginnerGuide.href = '/guides/beginner-guide/';
+  beginnerGuide.dataset.beginnerGuide = 'true';
+  beginnerGuide.textContent = 'Beginner guide';
+  if (location.pathname === '/guides/beginner-guide/') beginnerGuide.classList.add('active');
+  nav.append(beginnerGuide);
 }
 
 const screenshotSlot = document.querySelector('.screenshot-slot');
@@ -35,6 +48,10 @@ document.querySelectorAll('.site-footer').forEach((footer) => {
   const page = (name) => new URL(name, siteRoot).href;
   utility.innerHTML = `<a href="${page('about.html')}">About</a><a href="${page('editorial-policy.html')}">Editorial policy</a><a href="${page('privacy.html')}">Privacy</a><a href="${page('terms.html')}">Terms</a><a href="${page('cookies.html')}">Cookies</a><a href="${page('advertise.html')}">Advertise</a>`;
   footer.append(utility);
+  const updateNote = document.createElement('p');
+  updateNote.className = 'site-update-note';
+  updateNote.textContent = 'Guide status: routes, maps and item pages are continuously being verified and added.';
+  footer.append(updateNote);
 });
 
 const tracked = document.querySelectorAll('[data-track]');
