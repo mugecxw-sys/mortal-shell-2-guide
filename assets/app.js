@@ -39,6 +39,29 @@ if (screenshotSlot && appScript?.src) {
   screenshot.src = appScript.src.replace('app.js', 'images/home-hero.webp');
 }
 
+const shellIcons = {
+  Harros: 'harros',
+  Tiel: 'tiel',
+  Proxima: 'proxima',
+  Gragu: 'gragu',
+  Eredrim: 'eredrim',
+  Smert: 'smert',
+  Lazlo: 'lazlo',
+  Sariel: 'sariel',
+  Genessa: 'genessa',
+};
+
+if (location.pathname.includes('/collectibles/shells/')) {
+  document.querySelectorAll('.catalog-row').forEach((row) => {
+    const shellName = row.querySelector('h2')?.textContent.trim();
+    const iconName = shellIcons[shellName];
+    const slot = row.querySelector('.item-image');
+    if (!iconName || !slot || !appScript?.src) return;
+    slot.classList.add('shell-icon');
+    slot.innerHTML = `<img src="${new URL(`images/shells/${iconName}.webp`, appScript.src).href}" alt="${shellName} Shell icon" loading="lazy" decoding="async">`;
+  });
+}
+
 document.querySelectorAll('.site-footer').forEach((footer) => {
   if (footer.querySelector('.footer-utility')) return;
   const utility = document.createElement('nav');
