@@ -102,8 +102,9 @@
       const element = document.createElement('button');
       element.type = 'button';
       element.className = `map-marker ${landmark.group}`;
+      // Game map coordinates use the bottom-left as origin; CSS uses the top-left.
       element.style.left = `${((landmark.x - minX) / (maxX - minX)) * 100}%`;
-      element.style.top = `${((landmark.y - minY) / (maxY - minY)) * 100}%`;
+      element.style.top = `${((maxY - landmark.y) / (maxY - minY)) * 100}%`;
       element.setAttribute('aria-label', `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.nameZh}. English localization pending.`);
       element.title = `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.nameZh}`;
       element.addEventListener('click', (event) => { event.stopPropagation(); showDetail(landmark); });
