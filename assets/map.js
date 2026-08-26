@@ -72,7 +72,7 @@
   function updateMarkerVisibility() {
     let count = 0;
     markers.forEach(({ landmark, element }) => {
-      const haystack = `${landmark.nameZh} ${landmark.categoryZh} ${groupLabels[landmark.group] || ''}`.toLowerCase();
+      const haystack = `${landmark.name} ${landmark.category} ${groupLabels[landmark.group] || ''}`.toLowerCase();
       const visible = (activeGroup === 'all' || landmark.group === activeGroup) && (!query || haystack.includes(query));
       element.hidden = !visible;
       if (visible) count += 1;
@@ -87,12 +87,13 @@
     if (!detail) return;
     detail.replaceChildren();
     const title = document.createElement('strong');
-    title.lang = 'zh';
-    title.textContent = landmark.nameZh;
+    title.textContent = landmark.name;
     const category = document.createElement('span');
-    category.textContent = `${groupLabels[landmark.group]} · ${landmark.categoryZh}`;
+    category.textContent = `${groupLabels[landmark.group]} · ${landmark.category}`;
     const note = document.createElement('p');
-    note.textContent = 'English location name is being verified. This marker uses coordinate and category data only.';
+    note.textContent = landmark.isOfficialName
+      ? 'Official in-game English name.'
+      : 'English category label. The exact in-game name is still being verified.';
     detail.append(title, category, note);
     detail.hidden = false;
   }
@@ -105,8 +106,8 @@
       // Game map coordinates use the bottom-left as origin; CSS uses the top-left.
       element.style.left = `${((landmark.x - minX) / (maxX - minX)) * 100}%`;
       element.style.top = `${((maxY - landmark.y) / (maxY - minY)) * 100}%`;
-      element.setAttribute('aria-label', `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.nameZh}. English localization pending.`);
-      element.title = `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.nameZh}`;
+      element.setAttribute('aria-label', `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.name}`);
+      element.title = `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.name}`;
       element.addEventListener('click', (event) => { event.stopPropagation(); showDetail(landmark); });
       layer.append(element);
       markers.push({ landmark, element });
