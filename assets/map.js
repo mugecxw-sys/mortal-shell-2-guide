@@ -14,10 +14,22 @@
   const minScale = 0.72;
   const maxScale = 3.2;
   const markers = [];
-  const groupLabels = {
-    locations: 'Locations', collectibles: 'Collectibles', equipment: 'Equipment', upgrades: 'Upgrade materials',
-    npcs: 'NPCs & merchants', enemies: 'Bosses & elites', notes: 'Notes'
+  const filterLabels = {
+    all: 'All markers', locations: 'Locations', sidearms: 'Sidearms', shells: 'Shells', tarstones: 'Tarstones',
+    materials: 'Upgrade materials', keys: 'Keys', npcs: 'NPCs & merchants', bosses: 'Bosses & elites', other: 'Other finds'
   };
+  const getMarkerType = (landmark) => {
+    if (landmark.category === 'Sidearm') return 'sidearms';
+    if (landmark.category === 'Shell') return 'shells';
+    if (landmark.category === 'Tarstone') return 'tarstones';
+    if (landmark.category === 'Key') return 'keys';
+    if (landmark.group === 'upgrades') return 'materials';
+    if (landmark.group === 'npcs') return 'npcs';
+    if (landmark.group === 'enemies') return 'bosses';
+    if (landmark.group === 'locations') return 'locations';
+    return 'other';
+  };
+  const matchesFilter = (landmark, filter) => filter === 'all' || getMarkerType(landmark) === filter;
 
   const render = () => {
     surface.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${scale})`;
@@ -72,8 +84,9 @@
   function updateMarkerVisibility() {
     let count = 0;
     markers.forEach(({ landmark, element }) => {
-      const haystack = `${landmark.name} ${landmark.category} ${groupLabels[landmark.group] || ''}`.toLowerCase();
-      const visible = (activeGroup === 'all' || landmark.group === activeGroup) && (!query || haystack.includes(query));
+      const type = getMarkerType(landmark);
+      const haystack = `${landmark.name} ${landmark.category} ${filterLabels[type] || ''}`.toLowerCase();
+      const visible = matchesFilter(landmark, activeGroup) && (!query || haystack.includes(query));
       element.hidden = !visible;
       if (visible) count += 1;
     });
@@ -89,7 +102,7 @@
     const title = document.createElement('strong');
     title.textContent = landmark.name;
     const category = document.createElement('span');
-    category.textContent = `${groupLabels[landmark.group]} · ${landmark.category}`;
+    category.textContent = `${filterLabels[getMarkerType(landmark)]} · ${landmark.category}`;
     const note = document.createElement('p');
     note.textContent = landmark.isOfficialName
       ? 'Official in-game English name.'
@@ -102,15 +115,20 @@
     data.landmarks.forEach((landmark) => {
       const element = document.createElement('button');
       element.type = 'button';
-      element.className = `map-marker ${landmark.group}`;
+      const type = getMarkerType(landmark);
+      element.className = `map-marker ${type}`;
       // Game map coordinates use the bottom-left as origin; CSS uses the top-left.
       element.style.left = `${((landmark.x - minX) / (maxX - minX)) * 100}%`;
       element.style.top = `${((maxY - landmark.y) / (maxY - minY)) * 100}%`;
-      element.setAttribute('aria-label', `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.name}`);
-      element.title = `${groupLabels[landmark.group] || 'Map marker'}: ${landmark.name}`;
+      element.setAttribute('aria-label', `${filterLabels[type] || 'Map marker'}: ${landmark.name}`);
+      element.title = `${filterLabels[type] || 'Map marker'}: ${landmark.name}`;
       element.addEventListener('click', (event) => { event.stopPropagation(); showDetail(landmark); });
       layer.append(element);
       markers.push({ landmark, element });
+    });
+    document.querySelectorAll('[data-map-count]').forEach((counter) => {
+      const filter = counter.dataset.mapCount;
+      counter.textContent = data.landmarks.filter((landmark) => matchesFilter(landmark, filter)).length;
     });
     updateMarkerVisibility();
   }

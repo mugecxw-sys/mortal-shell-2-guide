@@ -13,6 +13,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#111011">
   <title>Mortal Shell II Interactive World Map | Mortal Shell II Guide</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles.css">
   <link rel="stylesheet" href="../assets/pages.css">
   <link rel="stylesheet" href="../assets/map.css">
@@ -52,16 +54,19 @@
         </div>
         <div class="map-filter-label">Show on map</div>
         <div class="map-filters" role="group" aria-label="Map categories">
-          <button class="map-filter active" type="button" data-filter="all" aria-pressed="true"><span class="filter-icon route-icon">●</span>All markers <b data-map-count="all">634</b></button>
-          <button class="map-filter" type="button" data-filter="locations" aria-pressed="false"><span class="filter-icon location-icon">⌖</span>Locations <b data-map-count="locations">137</b></button>
-          <button class="map-filter" type="button" data-filter="collectibles" aria-pressed="false"><span class="filter-icon collectible-icon">✦</span>Collectibles <b data-map-count="collectibles">199</b></button>
-          <button class="map-filter" type="button" data-filter="equipment" aria-pressed="false"><span class="filter-icon weapon-icon">◆</span>Equipment <b data-map-count="equipment">96</b></button>
-          <button class="map-filter" type="button" data-filter="upgrades" aria-pressed="false"><span class="filter-icon material-icon">◇</span>Upgrade materials <b data-map-count="upgrades">140</b></button>
-          <button class="map-filter" type="button" data-filter="npcs" aria-pressed="false"><span class="filter-icon shell-icon">●</span>NPCs &amp; merchants <b data-map-count="npcs">33</b></button>
-          <button class="map-filter" type="button" data-filter="enemies" aria-pressed="false"><span class="filter-icon enemy-icon">✕</span>Bosses &amp; elites <b data-map-count="enemies">26</b></button>
-          <button class="map-filter" type="button" data-filter="notes" aria-pressed="false"><span class="filter-icon note-icon">i</span>Notes <b data-map-count="notes">3</b></button>
+          <button class="map-filter active" type="button" data-filter="all" aria-pressed="true"><img class="filter-icon" src="../assets/icons/map/other.svg" alt="">All markers <b data-map-count="all">634</b></button>
+          <button class="map-filter" type="button" data-filter="locations" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/location.svg" alt="">Locations <b data-map-count="locations">137</b></button>
+          <button class="map-filter is-unavailable" type="button" aria-disabled="true" title="Exact primary-weapon pins are still being replayed and verified."><img class="filter-icon" src="../assets/icons/map/weapon.svg" alt="">Main weapons <b>—</b></button>
+          <button class="map-filter" type="button" data-filter="sidearms" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/sidearm.svg" alt="">Sidearms <b data-map-count="sidearms">8</b></button>
+          <button class="map-filter" type="button" data-filter="shells" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/shell.svg" alt="">Shells <b data-map-count="shells">9</b></button>
+          <button class="map-filter" type="button" data-filter="tarstones" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/tarstone.svg" alt="">Tarstones <b data-map-count="tarstones">75</b></button>
+          <button class="map-filter" type="button" data-filter="materials" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/material.svg" alt="">Upgrade materials <b data-map-count="materials">140</b></button>
+          <button class="map-filter" type="button" data-filter="keys" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/key.svg" alt="">Keys <b data-map-count="keys">22</b></button>
+          <button class="map-filter" type="button" data-filter="npcs" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/npc.svg" alt="">NPCs &amp; merchants <b data-map-count="npcs">33</b></button>
+          <button class="map-filter" type="button" data-filter="bosses" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/boss.svg" alt="">Bosses &amp; elites <b data-map-count="bosses">26</b></button>
+          <button class="map-filter" type="button" data-filter="other" aria-pressed="false"><img class="filter-icon" src="../assets/icons/map/other.svg" alt="">Other finds <b data-map-count="other">184</b></button>
         </div>
-        <p class="map-filter-note">Marker descriptions are deliberately omitted until they are independently rewritten and verified. Click a point to see its category.</p>
+        <p class="map-filter-note">Each type uses an original guide icon. Main-weapon pins stay unavailable until their exact routes are replayed; no approximate pins are shown. Click a point to see its category.</p>
         <div class="map-results" id="map-results" aria-live="polite">
           <a class="map-result" href="../walkthrough/prologue/" data-search="prologue harros sacred egg"><span>00</span><strong>Prologue</strong><small>Starting route</small></a>
           <a class="map-result" href="../walkthrough/marrow-keep/" data-search="marrow keep hub dew forge"><span>01</span><strong>Marrow Keep</strong><small>Hub route</small></a>
