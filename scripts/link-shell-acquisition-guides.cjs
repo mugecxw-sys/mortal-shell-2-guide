@@ -11,7 +11,10 @@ shells = shells
   .replace('Reported near Blackridge Pass.</p>', 'Get the <a href="proxima/">annotated Proxima route</a> at Blackridge Cliffs.</p>')
   .replace('Reported at the One-Legged Wolf Tavern.</p>', 'Get the <a href="gragu/">annotated Gragu route</a> from the One-Legged Wolf Tavern.</p>')
   .replace('Reported after the Citadel of Penance Warden.</p>', 'Get the <a href="eredrim/">annotated Eredrim route</a> from Citadel of Penance Beacon.</p>')
-  .replace('Reported at Prophet’s Rest.</p>', 'Get the <a href="smert/">annotated Smert route</a> from Outskirts of Nochte Beacon.</p>');
+  .replace('Reported at Prophet’s Rest.</p>', 'Get the <a href="smert/">annotated Smert route</a> from Outskirts of Nochte Beacon.</p>')
+  .replace('Reported in the Royal Crypt of Mammon.</p>', 'Get the <a href="lazlo/">annotated Lazlo route</a> from High Lord\'s Courtyard Beacon.</p>')
+  .replace('Reported in the Chamber of Becoming.</p>', 'Get the <a href="sariel/">annotated Sariel route</a> from The Silent Steps Beacon.</p>')
+  .replace('Reported at Revenant Graves.</p>', 'Get the <a href="genessa/">annotated Genessa route</a> through Revenant Graves.</p>');
 fs.writeFileSync(shellsPath, shells);
 
 let widows = fs.readFileSync(widowsPath, 'utf8');
