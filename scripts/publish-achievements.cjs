@@ -81,7 +81,8 @@ function card(entry, index) {
   const tierClass = `ps5-${tier.toLowerCase()}`;
   const isMissable = section === 'missable';
   const platform = name === 'No Lifer' ? 'Steam completion / PS5 Platinum' : 'Steam achievement / PS5 trophy';
-  return `<article class="achievement-card${isMissable ? ' is-missable' : ''}"><img src="${icon(index)}" width="64" height="64" loading="lazy" decoding="async" alt="Official Steam icon for ${esc(name)}"><div><h3>${esc(name)}</h3><p>${esc(requirement)}</p><div class="achievement-meta"><span>${platform}</span><span class="${tierClass}">PS5 ${tier}</span>${isMissable ? '<span class="missable-tag">Missable</span>' : ''}</div></div></article>`;
+  const requirementHtml = name === 'Sat Nav' ? `${esc(requirement)} <a href="../collectibles/map-fragments/">Open all 11 routes.</a>` : esc(requirement);
+  return `<article class="achievement-card${isMissable ? ' is-missable' : ''}"><img src="${icon(index)}" width="64" height="64" loading="lazy" decoding="async" alt="Official Steam icon for ${esc(name)}"><div><h3>${esc(name)}</h3><p>${requirementHtml}</p><div class="achievement-meta"><span>${platform}</span><span class="${tierClass}">PS5 ${tier}</span>${isMissable ? '<span class="missable-tag">Missable</span>' : ''}</div></div></article>`;
 }
 
 const body = sections.map(([id, title, description]) => {

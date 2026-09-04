@@ -1,0 +1,19 @@
+.route-figure{margin:0 0 32px;border:1px solid var(--line);background:#151414;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.route-figure img{display:block;width:100%;height:auto}.route-figure figcaption{padding:16px 19px;border-top:1px solid var(--line);color:#d1cbc3;font-size:.93rem;line-height:1.65}.route-figure figcaption strong{display:block;margin-bottom:4px;color:#bdced0;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase}.route-figure figcaption .item-name{color:#e8e3da;font-weight:700}
+.fragment-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:38px 0 58px;border:1px solid var(--line);background:var(--line)}
+.fragment-nav a{display:flex;align-items:center;gap:12px;padding:16px 18px;background:#181716;color:var(--ink);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.fragment-nav a:hover{background:#252221;color:var(--acid)}
+.fragment-nav span{display:grid;place-items:center;width:25px;height:25px;border:1px solid #696662;color:var(--acid);font-family:var(--serif);font-size:1rem;font-weight:400}
+.fragment-region{display:flex;flex-direction:column;margin:76px 0 0;padding-top:8px;border-top:1px solid var(--line)}
+.fragment-region>h2{margin-top:28px}.fragment-region>p{max-width:660px;margin-bottom:30px}
+.fragment-location{scroll-margin-top:32px;margin:44px 0 68px;padding-top:22px;border-top:1px solid #302e2c}
+.fragment-location h3{margin:0 0 7px;color:var(--ink);font-family:var(--serif);font-size:1.7rem;font-weight:400;letter-spacing:-.035em;text-transform:none}
+.fragment-location>p{margin:0 0 18px;color:var(--muted)}
+.fragment-location .route-figure{position:relative}
+.fragment-location .route-figure:after{content:'MORTALSHELL2GUIDE.XYZ';position:absolute;right:0;top:0;padding:7px 9px;background:rgba(10,9,9,.78);color:#bdced0;font-size:.55rem;font-weight:800;letter-spacing:.12em;pointer-events:none}
+.fragment-location .route-figure figcaption{position:relative;z-index:1}
+.fragment-tip{margin:0 0 22px;padding:13px 15px;border-left:2px solid #a62e2a;background:#1b1818;color:#cac4bd;font-size:.9rem}
+.fragment-tip strong{color:#e8e3da}
+#fainweald-1{order:1}#fainweald-2{order:2}#fainweald-3{order:3}#fainweald-4{order:4}#fainweald-5{order:5}
+#mammon-1{order:1}#mammon-2{order:2}#mammon-3{order:3}#mammon-4{order:4}#mammon-5{order:5}#mammon-6{order:6}
+@media(max-width:760px){.fragment-nav{grid-template-columns:1fr}.fragment-location{margin-bottom:52px}.fragment-location h3{font-size:1.5rem}.fragment-location .route-figure:after{padding:5px 6px;font-size:.47rem}}
