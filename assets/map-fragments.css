@@ -1,8 +1,9 @@
 .route-figure{margin:0 0 32px;border:1px solid var(--line);background:#151414;box-shadow:0 18px 50px rgba(0,0,0,.22)}
 .route-figure img{display:block;width:100%;height:auto}.route-figure figcaption{padding:16px 19px;border-top:1px solid var(--line);color:#d1cbc3;font-size:.93rem;line-height:1.65}.route-figure figcaption strong{display:block;margin-bottom:4px;color:#bdced0;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase}.route-figure figcaption .item-name{color:#e8e3da;font-weight:700}
-.fragment-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:38px 0 58px;border:1px solid var(--line);background:var(--line)}
+.fragment-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:38px 0 18px;border:1px solid var(--line);background:var(--line)}
 .fragment-nav a{display:flex;align-items:center;gap:12px;padding:16px 18px;background:#181716;color:var(--ink);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
 .fragment-nav a:hover{background:#252221;color:var(--acid)}
+.fragment-index{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin:0 0 58px}.fragment-index-title{grid-column:1/-1;color:var(--muted);font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.fragment-index a{padding:10px 12px;border:1px solid var(--line);background:#151414;color:#d1cbc3;font-size:.72rem;font-weight:700;text-align:center;text-decoration:none}.fragment-index a:hover{border-color:#696662;color:var(--acid)}
 .fragment-nav span{display:grid;place-items:center;width:25px;height:25px;border:1px solid #696662;color:var(--acid);font-family:var(--serif);font-size:1rem;font-weight:400}
 .fragment-region{display:flex;flex-direction:column;margin:76px 0 0;padding-top:8px;border-top:1px solid var(--line)}
 .fragment-region>h2{margin-top:28px}.fragment-region>p{max-width:660px;margin-bottom:30px}
@@ -16,4 +17,4 @@
 .fragment-tip strong{color:#e8e3da}
 #fainweald-1{order:1}#fainweald-2{order:2}#fainweald-3{order:3}#fainweald-4{order:4}#fainweald-5{order:5}
 #mammon-1{order:1}#mammon-2{order:2}#mammon-3{order:3}#mammon-4{order:4}#mammon-5{order:5}#mammon-6{order:6}
-@media(max-width:760px){.fragment-nav{grid-template-columns:1fr}.fragment-location{margin-bottom:52px}.fragment-location h3{font-size:1.5rem}.fragment-location .route-figure:after{padding:5px 6px;font-size:.47rem}}
+@media(max-width:760px){.fragment-nav{grid-template-columns:1fr}.fragment-index{grid-template-columns:repeat(2,minmax(0,1fr))}.fragment-location{margin-bottom:52px}.fragment-location h3{font-size:1.5rem}.fragment-location .route-figure:after{padding:5px 6px;font-size:.47rem}}
