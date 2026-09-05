@@ -40,6 +40,7 @@ const guideLinks = new Map([
   ['Sester', '../collectibles/shells/genessa/'],
   ['Down with the Thickness', '../collectibles/shells/lazlo/'],
   ['Shell Seeker', '../collectibles/shells/'],
+  ['Over 9000', '../guides/upgrade-materials/'],
   ['Sat Nav', '../collectibles/map-fragments/'],
   ['Stoned', '../collectibles/tarstones/'],
 ]);

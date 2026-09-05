@@ -55,3 +55,4 @@ let sitemap=read('sitemap.xml');
 if(!sitemap.includes('/guides/upgrade-materials/')) sitemap=sitemap.replace('</urlset>','  <url><loc>https://mortalshell2guide.xyz/guides/upgrade-materials/</loc><lastmod>2026-09-05</lastmod></url>\n</urlset>');
 write('sitemap.xml',sitemap);
 console.log(`Published 5 tiers, 25 levels, ${total} Coin. Updated related links and outdated cap wording.`);
+require('./seo-upgrade-materials.cjs');
