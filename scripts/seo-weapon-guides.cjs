@@ -156,7 +156,7 @@ hub = hub.replace('<h1>Primary weapons</h1>', '<h1>All Primary Weapon Locations<
 hub = hub.replace(/<p class="lede">[\s\S]*?<\/p>/, '<p class="lede">Find all eight Tarforge-upgradeable primary weapons. Seven pages use original annotated acquisition routes; The Iconoclast has a separate automatic-unlock guide.</p>');
 hub = hub.replace(/<p class="reference-alert">[\s\S]*?<\/p>/, '<p class="reference-alert"><strong>All unlock guides live:</strong> every primary weapon now has a dedicated location or unlock page. Want one practical first target? Read why <a href="best-early-weapons/">Great Martyr\'s Blade is our early-game pick</a>.</p>');
 hub = hub.replace('Get the <a href="the-iconoclast/">annotated The Iconoclast route</a>.', 'Read the <a href="the-iconoclast/">The Iconoclast automatic-unlock guide</a>.');
-hub = hub.replace(/<p class="source-line">[\s\S]*?<\/p>/, '<p class="source-line">Original acquisition routes and gameplay captures last reviewed 29 August 2026. Base damage, item text, attack-kit structure and Tarforge caps are taken from verified game data.</p>');
+hub = hub.replace(/<p class="source-line">[\s\S]*?<\/p>/, '<p class="source-line">Original acquisition routes and gameplay captures last reviewed 29 August 2026. Base damage, item text and attack-kit structure use the supplied game data. Recorded upgrade-level values are a data snapshot, not a statement of the final enhancement cap.</p>');
 hub = hub.replace(/<nav id="site-nav">/, '<nav id="site-nav" aria-label="Main navigation">');
 const hubImage = `${site}/assets/images/weapon-guides/great-martyrs-blade/route-11.webp`;
 if (!hub.includes('property="og:image"')) {

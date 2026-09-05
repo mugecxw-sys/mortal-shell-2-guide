@@ -146,6 +146,11 @@
       updateMarkerVisibility();
     });
   });
+  const initialFilter = new URLSearchParams(window.location.search).get('filter');
+  if (initialFilter) {
+    const button = [...document.querySelectorAll('.map-filter')].find(item => item.dataset.filter === initialFilter);
+    button?.click();
+  }
   fetch(new URL('../assets/map-landmarks.json', window.location.href))
     .then((response) => response.ok ? response.json() : Promise.reject(new Error('Map data unavailable')))
     .then(addLandmarks)

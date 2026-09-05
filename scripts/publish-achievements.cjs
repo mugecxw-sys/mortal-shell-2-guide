@@ -30,7 +30,7 @@ const entries = [
   ['The Alchemist', 'Unlock Sariel.', 'Bronze', 'shells'],
   ['Sester', 'Unlock Sester Genessa.', 'Bronze', 'shells'],
   ['Stop – Hammer Time', 'Unlock the Obsidian Hammer.', 'Bronze', 'gear'],
-  ['Over 9000', 'Upgrade any primary weapon to the Tarforge maximum (+16).', 'Silver', 'completion'],
+  ['Over 9000', 'Upgrade any primary weapon to the Tarforge maximum.', 'Silver', 'completion'],
   ['Beautiful Baby', 'Unlock the Cursed Child.', 'Bronze', 'gear'],
   ['Speared', 'Unlock the Ballistazooka.', 'Bronze', 'gear'],
   ['Down with the Thickness', 'Unlock Lazlo.', 'Bronze', 'shells'],
