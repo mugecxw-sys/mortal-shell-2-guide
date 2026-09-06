@@ -6,14 +6,18 @@ const root = path.join(__dirname, '..');
 const site = 'https://mortalshell2guide.xyz';
 const route = '/achievements/';
 const canonical = `${site}${route}`;
-const updated = '2026-09-05';
+const updated = '2026-09-06';
 const title = 'Mortal Shell 2 Achievements & Trophy Guide (All 53)';
 const titleHtml = title.replaceAll('&', '&amp;');
-const description = 'Complete all 53 Mortal Shell 2 achievements and PS5 trophies with a categorized checklist, three missable warnings, official icons and Platinum requirements.';
+const description = 'Complete all 53 Mortal Shell 2 achievements and PS5 trophies with a categorized checklist, four missable warnings, official icons and Platinum requirements.';
 const imagePath = '/assets/icons/achievements/steam-53.jpg';
 const image = `${site}${imagePath}`;
 
 const guideLinks = new Map([
+  ['Mid Summer?', '../guides/missable-trophies/#mid-summer'],
+  ['No, You Still Can’t Win', '../guides/missable-trophies/#tar-golem'],
+  ['Peter’s Perfect Parry', '../guides/missable-trophies/#perfect-parry'],
+  ['Baghead / Bag Holder', '../guides/missable-trophies/#bag-holder'],
   ['You’re More Than a Weapon', '../collectibles/'],
   ['Deep Cuts', '../collectibles/weapons/axe-dagger/'],
   ['Old School', '../collectibles/sidearms/forgotten-crossbow/'],
@@ -46,12 +50,12 @@ const guideLinks = new Map([
 ]);
 
 const categories = [
-  ['missable', '03', 'Missables'],
+  ['missable', '04', 'Missables'],
   ['progress', '03', 'Story'],
   ['gear', '16', 'Weapons'],
   ['shells', '09', 'Shells'],
   ['bosses', '10', 'Bosses'],
-  ['completion', '12', 'Completion'],
+  ['completion', '11', 'Completion'],
 ];
 
 function replaceMeta(html, selector, value) {
@@ -93,18 +97,20 @@ html = html.replace('<nav id="site-nav">', '<nav id="site-nav" aria-label="Main 
 html = html.replace('<h1 class="page-title">Achievements<br><em>& Platinum</em></h1>', '<h1 class="page-title">Mortal Shell 2<br><em>Achievements &amp; Trophies</em></h1>');
 html = html.replace(
   /<p class="lede">[\s\S]*?<\/p>/,
-  '<p class="lede">Mortal Shell 2 has 53 Steam achievements and 53 PS5 trophies including Platinum. Use the six-part checklist below, and complete the three missable objectives during their one-time encounters.</p>',
+  '<p class="lede">Mortal Shell 2 has 53 Steam achievements and 53 PS5 trophies including Platinum. Use the six-part checklist below, and protect all four missable objectives before their lockout points.</p>',
 );
 html = html.replace('Tarforge maximum (+16).', 'Tarforge maximum.');
 
 const quickNav = `<nav class="achievement-nav" aria-label="Achievement categories">${categories.map(([id, count, label]) => `<a href="#${id}"><span>${count}</span>${label}</a>`).join('')}</nav>`;
-if (!html.includes('class="achievement-nav"')) {
+if (html.includes('class="achievement-nav"')) {
+  html = html.replace(/<nav class="achievement-nav"[\s\S]*?<\/nav>/, quickNav);
+} else {
   html = html.replace('<section class="completion-summary">', `${quickNav}<section class="completion-summary">`);
 }
 
 html = html.replace(/<article class="achievement-card([^"]*)"([^>]*)>([\s\S]*?)<\/article>/g, (block, extraClasses, attrs, inner) => {
   const name = decodeHtml(inner.match(/<h3>([\s\S]*?)<\/h3>/)?.[1] || '');
-  const id = `achievement-${slugify(name)}`;
+  const id = name === 'Baghead / Bag Holder' ? 'achievement-baghead' : `achievement-${slugify(name)}`;
   let nextAttrs = attrs.replace(/\s+id="[^"]*"/g, '');
   nextAttrs += ` id="${id}"`;
   let nextInner = inner;
@@ -163,7 +169,7 @@ if (html.includes('type="application/ld+json"')) {
 } else {
   html = html.replace('</head>', `${schemaTag}</head>`);
 }
-html = html.replace(/Last reviewed: [^<]+/, 'Last reviewed: 5 September 2026.');
+html = html.replace(/Last reviewed: [^<]+/, 'Last reviewed: 6 September 2026.');
 fs.writeFileSync(file, html);
 
 const cssFile = path.join(root, 'assets', 'achievements.css');

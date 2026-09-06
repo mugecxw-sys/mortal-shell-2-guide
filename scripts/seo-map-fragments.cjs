@@ -120,8 +120,8 @@ fs.writeFileSync(cssFile, css);
 const homeFile = path.join(root, 'index.html');
 let home = fs.readFileSync(homeFile, 'utf8');
 home = home.replace(
-  /<section class="notice" aria-label="Guide status">[\s\S]*?<\/section>/,
-  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: complete Upgrade Materials &amp; Tarforge guide.</strong> See all five materials, every +1 to +25 cost, 185,650 Coin total, vendor stock and all five Tarforge unlock routes. <a href="guides/upgrade-materials/">Open the upgrade planner →</a></p></section>',
+  /<section class="notice" aria-label="(?:Guide status|Latest guide)">[\s\S]*?<\/section>/,
+  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: all 4 Mortal Shell 2 missable trophies.</strong> Protect Mid Summer?, No, You Still Can’t Win, Peter’s Perfect Parry and Bag Holder with exact lockout and recovery steps. <a href="guides/missable-trophies/">Protect your trophy run →</a> <a href="guides/upgrade-materials/">Plan Tarforge costs →</a></p></section>',
 );
 fs.writeFileSync(homeFile, home);
 

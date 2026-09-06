@@ -29,7 +29,7 @@ if (description.length < 120 || description.length > 165) errors.push(`descripti
 if (canonical !== expected) errors.push('canonical mismatch');
 if ((html.match(/<h1\b/gi) || []).length !== 1) errors.push('expected exactly one H1');
 if (!html.includes('property="og:image"') || !html.includes('name="twitter:image"')) errors.push('social image metadata incomplete');
-if (!sitemap.includes(`<loc>${expected}</loc><lastmod>2026-09-05</lastmod>`)) errors.push('dated sitemap entry missing');
+if (!sitemap.includes(`<loc>${expected}</loc><lastmod>2026-09-06</lastmod>`)) errors.push('dated sitemap entry missing');
 if (html.includes('Tarforge maximum (+16)')) errors.push('obsolete +16 upgrade claim remains');
 
 const cards = [...html.matchAll(/<article class="achievement-card[^"]*"[^>]*id="([^"]+)"/g)].map((match) => match[1]);
@@ -38,6 +38,10 @@ if (new Set(cards).size !== cards.length) errors.push('duplicate achievement car
 for (const section of sectionIds) {
   if (!html.includes(`id="${section}"`)) errors.push(`section ${section} missing`);
   if (!html.includes(`href="#${section}"`)) errors.push(`quick link ${section} missing`);
+}
+if (!html.includes('<strong>4</strong><span>Missables</span>')) errors.push('visible missable count must be four');
+for (const anchor of ['mid-summer', 'tar-golem', 'perfect-parry', 'bag-holder']) {
+  if (!html.includes(`href="../guides/missable-trophies/#${anchor}"`)) errors.push(`missable deep link ${anchor} missing`);
 }
 
 const schemas = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
