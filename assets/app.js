@@ -69,7 +69,7 @@ document.querySelectorAll('.site-footer').forEach((footer) => {
   utility.setAttribute('aria-label', 'Site information');
   const siteRoot = new URL('../', appScript.src);
   const page = (name) => new URL(name, siteRoot).href;
-  utility.innerHTML = `<a href="${page('about.html')}">About</a><a href="${page('editorial-policy.html')}">Editorial policy</a><a href="${page('privacy.html')}">Privacy</a><a href="${page('terms.html')}">Terms</a><a href="${page('cookies.html')}">Cookies</a><a href="${page('advertise.html')}">Advertise</a>`;
+  utility.innerHTML = `<a href="${page('about.html')}">About</a><a href="${page('editorial-policy.html')}">Editorial policy</a><a href="${page('privacy.html')}">Privacy</a><a href="${page('terms.html')}">Terms</a><a href="${page('cookies.html')}">Cookies</a><a href="${page('advertise.html')}">Advertise</a><a href="${page('contact.html')}">Contact</a>`;
   footer.append(utility);
   const updateNote = document.createElement('p');
   updateNote.className = 'site-update-note';
