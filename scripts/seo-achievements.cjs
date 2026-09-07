@@ -47,6 +47,7 @@ const guideLinks = new Map([
   ['Over 9000', '../guides/upgrade-materials/'],
   ['Sat Nav', '../collectibles/map-fragments/'],
   ['Stoned', '../collectibles/tarstones/locations/'],
+  ['Seeking the Past', '../guides/seeking-the-past/'],
 ]);
 
 const categories = [
