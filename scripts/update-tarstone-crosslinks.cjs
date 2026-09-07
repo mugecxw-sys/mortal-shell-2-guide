@@ -25,4 +25,9 @@ update('collectibles/index.html', html => html
   .replace('Reference first. Verified route next.', 'Source the route. Mark the limits.')
   .replace('Names and conditions are matched to the current English game text where possible. Numerical stats, exact map steps, and image annotations are only published after a first-hand verification pass and use original captures.', 'Names and conditions are matched to current English game text where possible. Route pages state their verification date, version limits and source basis; uncertain map details are kept at route-note level.'));
 
+update('index.html', html => html.replace(
+  /<section class="notice" aria-label="(?:Guide status|Latest guide)">[\s\S]*?<\/section>/,
+  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: all 75 Mortal Shell 2 Tarstone locations.</strong> Search by name, region or acquisition method, track 73/75 Stoned progress, and troubleshoot missing or post-patch stones. <a href="collectibles/tarstones/locations/">Open the Tarstone tracker →</a> <a href="guides/missable-trophies/">Protect all 4 missables →</a> <a href="guides/upgrade-materials/">Plan Tarforge costs →</a></p></section>',
+));
+
 console.log('Updated Tarstone catalogue, achievement card and collectibles hub links.');

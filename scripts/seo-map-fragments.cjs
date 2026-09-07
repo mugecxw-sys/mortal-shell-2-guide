@@ -121,7 +121,7 @@ const homeFile = path.join(root, 'index.html');
 let home = fs.readFileSync(homeFile, 'utf8');
 home = home.replace(
   /<section class="notice" aria-label="(?:Guide status|Latest guide)">[\s\S]*?<\/section>/,
-  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: all 4 Mortal Shell 2 missable trophies.</strong> Protect Mid Summer?, No, You Still Can’t Win, Peter’s Perfect Parry and Bag Holder with exact lockout and recovery steps. <a href="guides/missable-trophies/">Protect your trophy run →</a> <a href="guides/upgrade-materials/">Plan Tarforge costs →</a></p></section>',
+  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: all 75 Mortal Shell 2 Tarstone locations.</strong> Search by name, region or acquisition method, track 73/75 Stoned progress, and troubleshoot missing or post-patch stones. <a href="collectibles/tarstones/locations/">Open the Tarstone tracker →</a> <a href="guides/missable-trophies/">Protect all 4 missables →</a> <a href="guides/upgrade-materials/">Plan Tarforge costs →</a></p></section>',
 );
 fs.writeFileSync(homeFile, home);
 
