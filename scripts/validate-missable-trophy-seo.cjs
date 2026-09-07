@@ -27,12 +27,14 @@ const anchors = ['mid-summer', 'tar-golem', 'perfect-parry', 'bag-holder'];
 for (const anchor of anchors) {
   check(html.includes(`id="${anchor}"`), `Section ${anchor} missing`);
   check(html.includes(`href="#${anchor}"`), `TOC link ${anchor} missing`);
-  check(achievements.includes(`href="../guides/missable-trophies/#${anchor}"`), `Achievement deep link ${anchor} missing`);
+  if (anchor !== 'perfect-parry') check(achievements.includes(`href="../guides/missable-trophies/#${anchor}"`), `Achievement deep link ${anchor} missing`);
 }
+check(achievements.includes('href="../guides/peters-perfect-parry/"'), 'Dedicated Peter’s Perfect Parry achievement link missing');
+check(html.includes('href="../peters-perfect-parry/"'), 'Detailed Peter’s Perfect Parry cross-link missing');
 check(prologue.includes('../../guides/missable-trophies/#mid-summer'), 'Prologue Mid Summer internal link missing');
 check(prologue.includes('../../guides/missable-trophies/#tar-golem'), 'Prologue Tar Golem internal link missing');
 check(home.includes('href="guides/missable-trophies/"'), 'Homepage recommendation link missing');
-check(sitemap.includes(`<loc>${canonical}</loc><lastmod>2026-09-06</lastmod>`), 'Current sitemap entry missing');
+check(sitemap.includes(`<loc>${canonical}</loc><lastmod>2026-09-07</lastmod>`), 'Current sitemap entry missing');
 check((sitemap.match(new RegExp(`<loc>${canonical.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>`, 'g')) || []).length === 1, 'Sitemap entry must be unique');
 
 const schemas = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];

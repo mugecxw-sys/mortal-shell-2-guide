@@ -16,7 +16,7 @@ const image = `${site}${imagePath}`;
 const guideLinks = new Map([
   ['Mid Summer?', '../guides/missable-trophies/#mid-summer'],
   ['No, You Still Can’t Win', '../guides/missable-trophies/#tar-golem'],
-  ['Peter’s Perfect Parry', '../guides/missable-trophies/#perfect-parry'],
+  ['Peter’s Perfect Parry', '../guides/peters-perfect-parry/'],
   ['Baghead / Bag Holder', '../guides/missable-trophies/#bag-holder'],
   ['You’re More Than a Weapon', '../collectibles/'],
   ['Deep Cuts', '../collectibles/weapons/axe-dagger/'],

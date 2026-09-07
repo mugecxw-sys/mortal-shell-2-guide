@@ -40,9 +40,10 @@ for (const section of sectionIds) {
   if (!html.includes(`href="#${section}"`)) errors.push(`quick link ${section} missing`);
 }
 if (!html.includes('<strong>4</strong><span>Missables</span>')) errors.push('visible missable count must be four');
-for (const anchor of ['mid-summer', 'tar-golem', 'perfect-parry', 'bag-holder']) {
+for (const anchor of ['mid-summer', 'tar-golem', 'bag-holder']) {
   if (!html.includes(`href="../guides/missable-trophies/#${anchor}"`)) errors.push(`missable deep link ${anchor} missing`);
 }
+if (!html.includes('href="../guides/peters-perfect-parry/"')) errors.push('dedicated Peter’s Perfect Parry guide link missing');
 
 const schemas = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
 if (!schemas.length) errors.push('JSON-LD missing');

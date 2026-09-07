@@ -1,0 +1,24 @@
+const fs = require('fs');
+const path = require('path');
+const root = path.resolve(__dirname, '..');
+const page = fs.readFileSync(path.join(root, 'guides/peters-perfect-parry/index.html'), 'utf8');
+const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+const achievements = fs.readFileSync(path.join(root, 'achievements/index.html'), 'utf8');
+const missables = fs.readFileSync(path.join(root, 'guides/missable-trophies/index.html'), 'utf8');
+const fail = message => { throw new Error(message); };
+const expect = (condition, message) => condition || fail(message);
+
+expect(!page.includes('noindex'), 'Published page must be indexable');
+expect(sitemap.includes('/guides/peters-perfect-parry/'), 'Published page must be in sitemap');
+expect(achievements.includes('../guides/peters-perfect-parry/'), 'Achievement card must link to the guide');
+expect(missables.includes('../peters-perfect-parry/'), 'Missables guide must link to the detailed guide');
+expect(page.includes('Untarnished Seal'), 'Required Seal is missing');
+expect(page.includes('Phase-transition spin') && page.includes('<strong>Seven-hit headspin</strong>'), 'Attack comparison is incomplete');
+expect(page.includes('1—2—3-4-5-6—7'), 'Rhythm summary is missing');
+expect((page.match(/class="beat(?: [^"]+)?"/g) || []).length === 7, 'Expected seven timing beats');
+expect(page.includes('Why hits 6 and 7 often fail'), 'Late-hit troubleshooting is missing');
+expect(page.includes('Quit to Main Menu') && page.includes('New Game+'), 'Retry and NG+ recovery are incomplete');
+expect(page.includes('Eredrim') && page.includes('lowest-level fast weapon'), 'Shell and low-damage setup are missing');
+expect(fs.existsSync(path.join(root, 'assets/images/guides/peters-perfect-parry/seven-hit-rhythm.svg')), 'Timing diagram is missing');
+expect(page.includes('not a gameplay capture'), 'Diagram provenance is missing');
+console.log('Peter’s Perfect Parry publish validation passed: indexable, linked, in sitemap, and all required guide sections present.');
