@@ -111,6 +111,9 @@ if (!peter.includes('class="seo-breadcrumbs"')) {
 peter = peter.replace('The trophy should unlock as hit 7 is guarded.', 'Successful runs currently report the unlock as hit 7 is guarded.');
 peter = peter.replace('Clean timing diagram placeholder based on the verified seven-contact structure; it is a rhythm aid, not captured animation frames.', 'Original seven-contact timing schematic; use it as a rhythm aid rather than a frame-perfect animation reference.');
 peter = peter.replace('Keep or reacquire access to Untarnished Seal before the Prisoner’s Domain boss route.', 'Confirm that Untarnished Seal is available and equipped before the Prisoner’s Domain boss route.');
+if (!peter.includes('<strong>Timing caveat:</strong>')) {
+  peter = peter.replace(/<\/ol>\s*<h2 id="last-two">/, '</ol><p class="source-note"><strong>Timing caveat:</strong> current public guides group the middle contacts differently. Treat the 2–4–1 grouping as a practical input rhythm, not a universal metronome: watch the blade contacts, fully release each press, and preserve the clearly delayed seventh guard.</p>\n\n<h2 id="last-two">');
+}
 if (!peter.includes('href="/guides/seeking-the-past/"')) {
   peter = peter.replace('</nav><footer class="article-footer">', '<a href="/guides/seeking-the-past/">All 40 Shell Memories</a></nav><footer class="article-footer">');
 }

@@ -28,6 +28,7 @@ expect(home.includes('href="guides/peters-perfect-parry/"'), 'Homepage must feat
 expect(page.includes('Untarnished Seal'), 'Required Seal is missing');
 expect(page.includes('Phase-transition spin') && page.includes('<strong>Seven-hit headspin</strong>'), 'Attack comparison is incomplete');
 expect(page.includes('1—2—3-4-5-6—7'), 'Rhythm summary is missing');
+expect(page.includes('<strong>Timing caveat:</strong>') && page.includes('not a universal metronome'), 'Version-sensitive rhythm caveat is missing');
 expect((page.match(/class="beat(?: [^"]+)?"/g) || []).length === 7, 'Expected seven timing beats');
 expect(page.includes('Why hits 6 and 7 often fail'), 'Late-hit troubleshooting is missing');
 expect(page.includes('Quit to Main Menu') && page.includes('New Game+'), 'Retry and NG+ recovery are incomplete');
