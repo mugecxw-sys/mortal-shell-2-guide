@@ -126,7 +126,7 @@ const homeFile = path.join(root, 'index.html');
 let home = fs.readFileSync(homeFile, 'utf8');
 home = home.replace(
   /<section class="notice" aria-label="(?:Guide status|Latest guide)">[\s\S]*?<\/section>/,
-  '<section class="notice" aria-label="Latest guide"><span class="status-dot"></span><p><strong>New: all 75 Mortal Shell 2 Tarstone locations.</strong> Search by name, region or acquisition method, track 73/75 Stoned progress, and troubleshoot missing or post-patch stones. <a href="collectibles/tarstones/locations/">Open the Tarstone tracker →</a> <a href="guides/missable-trophies/">Protect all 4 missables →</a> <a href="guides/upgrade-materials/">Plan Tarforge costs →</a></p></section>',
+  "<section class=\"notice\" aria-label=\"Latest guides\"><span class=\"status-dot\"></span><p><strong>New: two focused trophy guides.</strong> Master Peter’s seven-hit Perfect Guard and track all 40 Shell Memories for Seeking the Past. <a href=\"guides/peters-perfect-parry/\">Learn the 7-hit timing →</a> <a href=\"guides/seeking-the-past/\">Track all 40 Memories →</a> <a href=\"collectibles/tarstones/locations/\">Open the Tarstone tracker →</a> <a href=\"guides/upgrade-materials/\">Plan Tarforge costs →</a></p></section>",
 );
 fs.writeFileSync(homeFile, home);
 

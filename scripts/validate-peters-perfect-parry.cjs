@@ -5,13 +5,26 @@ const page = fs.readFileSync(path.join(root, 'guides/peters-perfect-parry/index.
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const achievements = fs.readFileSync(path.join(root, 'achievements/index.html'), 'utf8');
 const missables = fs.readFileSync(path.join(root, 'guides/missable-trophies/index.html'), 'utf8');
+const eredrim = fs.readFileSync(path.join(root, 'collectibles/shells/eredrim/index.html'), 'utf8');
+const axeDagger = fs.readFileSync(path.join(root, 'collectibles/weapons/axe-dagger/index.html'), 'utf8');
+const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const fail = message => { throw new Error(message); };
 const expect = (condition, message) => condition || fail(message);
 
 expect(!page.includes('noindex'), 'Published page must be indexable');
+expect(page.includes('name="robots" content="index, follow, max-image-preview:large"'), 'Robots directive is missing');
+const title = page.match(/<title>([^<]+)<\/title>/)?.[1] || '';
+const description = page.match(/<meta name="description" content="([^"]+)">/)?.[1] || '';
+expect(title.length >= 30 && title.length <= 60, `Title length should be 30–60 characters, got ${title.length}`);
+expect(description.length >= 120 && description.length <= 165, `Description length should be 120–165 characters, got ${description.length}`);
+expect(page.includes('class="seo-breadcrumbs"'), 'Visible breadcrumbs are missing');
+expect(page.includes('property="og:image:alt"') && page.includes('name="twitter:image:alt"'), 'Social image descriptions are incomplete');
 expect(sitemap.includes('/guides/peters-perfect-parry/'), 'Published page must be in sitemap');
 expect(achievements.includes('../guides/peters-perfect-parry/'), 'Achievement card must link to the guide');
 expect(missables.includes('../peters-perfect-parry/'), 'Missables guide must link to the detailed guide');
+expect(eredrim.includes('/guides/peters-perfect-parry/#setup'), 'Eredrim page must link to the setup');
+expect(axeDagger.includes('/guides/peters-perfect-parry/#setup'), 'Axe & Dagger page must link to the setup');
+expect(home.includes('href="guides/peters-perfect-parry/"'), 'Homepage must feature the guide');
 expect(page.includes('Untarnished Seal'), 'Required Seal is missing');
 expect(page.includes('Phase-transition spin') && page.includes('<strong>Seven-hit headspin</strong>'), 'Attack comparison is incomplete');
 expect(page.includes('1—2—3-4-5-6—7'), 'Rhythm summary is missing');
@@ -21,4 +34,11 @@ expect(page.includes('Quit to Main Menu') && page.includes('New Game+'), 'Retry 
 expect(page.includes('Eredrim') && page.includes('lowest-level fast weapon'), 'Shell and low-damage setup are missing');
 expect(fs.existsSync(path.join(root, 'assets/images/guides/peters-perfect-parry/seven-hit-rhythm.svg')), 'Timing diagram is missing');
 expect(page.includes('not a gameplay capture'), 'Diagram provenance is missing');
+expect(!page.includes('diagram placeholder'), 'Published copy must not call the diagram a placeholder');
+const schemaMatch = page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+expect(schemaMatch, 'JSON-LD is missing');
+const graph = JSON.parse(schemaMatch[1])['@graph'];
+expect(graph.some(item => item['@type'] === 'Article' && item.mainEntityOfPage), 'Article schema is incomplete');
+expect(graph.some(item => item['@type'] === 'BreadcrumbList'), 'Breadcrumb schema is missing');
+expect(graph.find(item => item['@type'] === 'FAQPage')?.mainEntity.length === 4, 'FAQ schema must match the four visible questions');
 console.log('Peter’s Perfect Parry publish validation passed: indexable, linked, in sitemap, and all required guide sections present.');
