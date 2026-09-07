@@ -46,7 +46,7 @@ const guideLinks = new Map([
   ['Shell Seeker', '../collectibles/shells/'],
   ['Over 9000', '../guides/upgrade-materials/'],
   ['Sat Nav', '../collectibles/map-fragments/'],
-  ['Stoned', '../collectibles/tarstones/'],
+  ['Stoned', '../collectibles/tarstones/locations/'],
 ]);
 
 const categories = [

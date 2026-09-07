@@ -1,0 +1,76 @@
+# Name | Region / route area | Beacon or route anchor | How to get
+Auspicious Stone|Fainweald|Mushroom Village|Solve the village offering chest: light candles behind the chest, beside the uphill building and behind the opposite house.
+Headsman's Stone|Mammon|Outskirts of Mammon|Search the ruins southeast of the Beacon; the chest sits beside a tree around the northeast corner.
+Devout Stone|Sester's Abbey|Sester's Gate|Climb north to the guarded gate, operate its adjacent wall switch, then loot inside.
+Shattering Stone|Collapsed Mine|Route note: Obsidianite Mines entrance|Take the northern lift upward, then the western mine route. Search the left dead end at the dungeon fork.
+Berserker's Stone|Temple of Vatra|One-Legged Wolf|Travel east through the Bone Gate. Upstairs, solve the left offering chest with three nearby candles. See the legacy warning.
+Marksman's Stone|Fainweald|Mushroom Village Gate|Take the upper northeast path; open the chest guarded by three enemies.
+Deadeye Stone|Sanguine Caverns|Route note: cavern entrance|Drop left toward the first camp after the entrance cave; search its chest.
+Siegebreaker's Stone|Glutted Mire|Seeping Mire|Backtrack into the first swamp. Unlock the offering chest using candles at the house stairs, pillar and locked cage.
+Spite Stone|Mammon|Abandoned Outpost|Ring the northern bell to reach Bellkeeper's Corner. The dungeon chest is on the platform beside its bell.
+Bulwark Stone|Fainweald|Citadel of Penance|Open the southwest wall gate with its lever. Clear the broken bridge and loot its far end.
+Retribution Stone|Fainweald|Widow's Overlook|Finish the combat Trial north of the Beacon and claim its reward.
+Gloombound Stone|Fainweald|Blackridge Pass|Visit Stones of Remembrance northeast of the Beacon; search the central ruined building. Base route; now a repeatable Fragile stone.
+Justiciar's Stone|Fainweald|Route note: Feeding Grounds|Defeat Broodshell Swarm southeast of the dungeon entrance and search the cave behind it. Now repeatable and Fragile.
+Wounding Stone|Fainweald|Widow's Overlook|Search around the first house in Tiel's area southeast of the Beacon.
+Grudge Stone|Fainweald|Citadel of Penance|Loot the chest just south of the Beacon, within the Citadel approach.
+Duality Stone|Fainweald|Nochtean Gate|Ride the southeast lift into Ravaged Tomb. Complete its pressure-plate route; search beneath the suspended body.
+Unyielding Stone|Fainweald|Route note: Deserted Mine|Complete the stone-circle Trial north of the dungeon entrance.
+Parasitic Stone|Fainweald|Widow's Overlook|Enter Martyr's Tomb through the building southeast of the Beacon; search the final room.
+Thief's Stone|Mammon|Gate of Infinity|Complete the Trial northeast of the Beacon, across from Ruk's map-fragment platform.
+Stillblade's Stone|Faded Citadel|Citadel Annex|Ride the spider across the gap; defeat the next guard and open the chest.
+Zealot's Stone|Mammon|High Lords Courtyard|Descend east to Besieged Ruins. Touch the arrow-pierced helmet and finish its knight memory.
+Clerik's Stone|Fainweald|Route note: Disciple's Stash|Climb southwest into the upper castle. Strike the false wall in its northern corner to reach the cliffside chest.
+Tyrant's Stone|Sester's Abbey|Abbey Entrance|Cross back via the Bone Gate; strike the white-marked wall in the upper castle corridor to reveal the chest.
+Enfeebling Stone|Mammon|Outskirts of Mammon|Complete the combat Trial east of the Beacon.
+Shuddering Stone|Fainweald|Gloomshade Grove|Travel southwest to Desolate Peak and Illusionist's Cache. Use the arches and pressure plate to uncover the reward chest.
+Pulse Stone|Conquered Temple|Winterglass Lake|Collect Immaculate Crown inside the Beacon first. Beyond the cave, approach the giant hands beside the Grisha Hunters for the chest.
+Ironpiercer's Stone|Prisoner's Domain|Slumwater Drain|Inside the Beacon dungeon, use the Bone Gate to reach the upper platform and its chest.
+Myriad Stone|Fainweald|Blackridge Pass|Break three marked graves northeast of the Beacon to enter Feeding Grounds. Search its main floor; beware the collapsing floor.
+Splitting Stone|Mammon|Gate of Mammon|Circle the nearby castle clockwise from Sentry's Grave toward the northern balcony chest.
+Rupturing Stone|Prisoner's Domain|Route note: final boss approach|Circle the summon platform before descending into The Nameless Captive's arena; loot the opposite side.
+Blackblood Stone|Sanguine Caverns|Pulsing Caves|Search the upper dungeon level near the stone-crab enemies.
+Corroded Stone|Glutted Mire|Sunken Village|Follow the wooden ascent and subsequent drop; search beyond the next pair of enemies.
+Squall Stone|Prisoner's Domain|Executioner's Pulpit|Check the chest side room off the iron-maiden ghost chamber, opposite the switch route toward the Ova.
+Charged Stone|Withered Shoals|Route note: Nameless Pass / Nameless Path|Inside this Beacon dungeon, turn right after the long tube for the chest. Guides differ on the Beacon spelling.
+Unstable Stone|Mammon|Castigator's Keep|Descend west onto the pillar walkways. Strike the hidden wall on the north side of the second pillar.
+Volatile Fragment|Fainweald|Mushroom Village Gate|Defeat Vrannic, the Grand Illusionist inside the Beacon dungeon.
+Arbiter's Prize|Fainweald|Widow's Overlook|Defeat the Great Arbiter of Flesh southeast of the Beacon.
+Serpent Stone|Fainweald|Stonebled Gate|Finish the Beacon's boss encounter with Lucian, the Thirsting Knight.
+Voltaic Crown|Fainweald|Nochtean Gate|Defeat Vrago, Solikar Champion at the end of the Beacon dungeon.
+Warden's Stone|Conquered Temple|Winterglass Lake|Continue along the temple route and defeat Urrig, the Executioner.
+Curseblood Stone|Mammon|Gate of Infinity|Place Grimorium Obscurum from the bookshelves into the wall slot; defeat Gloombound Wraith beyond.
+Nightgrasp Stone|Sester's Abbey|Abbey Entrance|Visit the southwest map tower. Light candles in the chest room, behind the Trial pillar and on the lower cliff ledge.
+Torpor Stone|Withered Shoals|Ossinite Falls|Pass behind the waterfall beside the Beacon and open the concealed chest.
+Wretchcaller's Stone|Mammon|Gate of Mammon|Defeat Infected Miner inside the Beacon dungeon.
+Inflamed Clawstone|Fainweald|Mushroom Village|Clear corruption northwest with Mether's Breath; enter Holding Cells through the well. Use Feeding Room Key to reach Rabid Grisha Pack.
+Hag Stone|Fainweald|Outskirts of Nochte|Search the Beacon dungeon's upper route after crossing the lowered wooden platform.
+Emberseed Stone|Fainweald|Mushroom Village|Search the chest along the Beacon dungeon route; the overworld offering chest is a different pickup.
+Viletongue Hedron|Mammon|Castigator's Keep|Interact beside the Ovum to enter the reversed-controls encounter. Defeat Viletongue Batushka.
+Voltaic Amber|Mammon|Castigator's Keep|Take the southwest route and southern lift to Vestige of Infinity; defeat Starved Harridan.
+Frostshard Stone|Conquered Temple|Route note: Conqueror's Hoard / Horde|Beyond the Ova room, pray at the statue and follow the flames through the snow to the final chest.
+Monarch's Vestige|Sester's Abbey|Abbey Entrance|Find Strange Village Key behind the coffin enemy; unlock the village door, descend and defeat Bor, the Deluded Monarch.
+Accursed Stone|Mammon|Abandoned Outpost|Use the lower wall button to open the upper gate, then search the chest beyond.
+Weeping Stone|Mammon|Abandoned Outpost|Visit The Collector south of the Beacon at night; purchase for 1,500 Coin.
+Acolyte's Stone|Marrow Keep|Marrow Keep|Buy from Merrick for 2,000 Coin.
+Unwieldy Stone|Marrow Keep|Marrow Keep|Buy from Merrick for 2,000 Coin. Some public lists spell this Unwieldly Stone.
+Magdalena's Memento|Glutted Mire|Route note: final boss arena|Defeat Magdalena, the Lady of the Woods.
+Captive's Scabstone|Prisoner's Domain|Route note: final boss arena|Defeat The Nameless Captive. Complete Peter's Perfect Parry first if pursuing that trophy.
+Conqueror's Reward|Conquered Temple|Route note: final boss arena|Defeat Droeg, the Conqueror.
+Infused Stone|Mammon|Abandoned Outpost|Visit The Collector south of the Beacon at night; purchase for 1,500 Coin.
+Shrike Stone|Glutted Mire|Seeping Mire|In the next swamp, take the descending right fork across the rope bridge; search near the giant eels.
+Colossus Stone|Mammon|The Silent Steps|Head northeast to the outer Bone Gate platform; search its chest before jumping onward.
+Lost Clotstone|Sanguine Caverns|Route note: final boss arena|Defeat The Lost Child.
+Scholar's Wormstone|Faded Citadel|Route note: final boss arena|Defeat Sir Isaac, the Scholar-Prince.
+Clockwork Shardstone|Mammon|Castigator's Keep|Open Alchemist's Workshop using the catapult near Outskirts of Mammon. Inside, uncover the hidden passage and descend the lever-operated lift for the chest.
+Hexapod Core|Withered Shoals|Route note: final boss arena|Defeat Hexapod.
+Solnir Shard|Faded Citadel|Citadel Annex|Beyond the Beacon, defeat Solnir, the Gloom Seeker.
+Confessor's Keepsake|Prisoner's Domain|Executioner's Pulpit|Take the Bone Gate route to Tishina's Confessor and defeat the miniboss.
+Fusillade Stone|Conquered Temple|Winterglass Lake|Defeat Caged Grisha at the end of the Beacon dungeon.
+Barrage Stone|Fainweald|Gloomshade Grove|Complete the Trial southeast of the Beacon.
+Tarred Fragment|Sanguine Caverns|Sanguine Shoreline|Continue beyond the Beacon and defeat Tarblighted Stoner.
+Fulminant Stone|Mammon|Abandoned Outpost|Visit The Collector south of the Beacon at night; purchase for 1,500 Coin.
+Strange Remnant|Withered Shoals|Route note: entrance route|Keep right from the entrance, use the Bone Gate to the island, and defeat Strange Grisha.
+Infested Stone|Mammon|Abandoned Outpost|Visit The Collector south of the Beacon at night; purchase for 1,500 Coin.
+Summoning Stone|Faded Citadel|Route note: entrance route|Clear the second invulnerability-fire group, then climb the flame-lit tunnel stairs to the chest.
+Hand of Rock|Fainweald|One-Legged Wolf|At the tavern southeast of the Beacon, open the Barkeep's Order Drink menu; buy for 1,500 Coin.
